@@ -8,6 +8,11 @@ def add_expense():
 def show_total():
     print("Total expense:", sum(expenses))
 
+def save_to_file():
+    with open("expenses.txt", "w") as f:
+        for e in expenses:
+            f.write(str(e) + "\n")
+
 while True:
     print("\n1. Add Expense\n2. Show Total\n3. Exit")
     choice = input("Choose: ")
